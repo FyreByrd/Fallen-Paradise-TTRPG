@@ -11715,7 +11715,7 @@ var require_which_typed_array = __commonJS({
         /** @type {Record<`\$${TypedArrayName}`, Getter>} */
         /** @type {any} */
         cache,
-        /** @type {(getter: Getter, name: `\$${import('.').TypedArrayName}`) => void} */
+        /** @type {(getter: Getter, name: `\$${import('./index.js').TypedArrayName}`) => void} */
         function(getter, typedArray) {
           if (!found) {
             try {
@@ -11736,7 +11736,7 @@ var require_which_typed_array = __commonJS({
         /** @type {Record<`\$${TypedArrayName}`, Getter>} */
         /** @type {any} */
         cache,
-        /** @type {(getter: typeof cache, name: `\$${import('.').TypedArrayName}`) => void} */
+        /** @type {(getter: typeof cache, name: `\$${import('./index.js').TypedArrayName}`) => void} */
         function(getter, name) {
           if (!found) {
             try {
