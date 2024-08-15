@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "29364a823374bcdc",
+            "id": "18ef801050223bfc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ancestries/elf.md",
+                "file": "ancestries/dwarf.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ancestries/elf.md",
+                "file": "ancestries/dwarf.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ancestries/elf.md",
+                "file": "ancestries/dwarf.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ancestries/elf.md"
+                "file": "ancestries/dwarf.md"
               }
             }
           }
@@ -146,8 +146,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "152aa1528b394993",
+  "active": "18ef801050223bfc",
   "lastOpenFiles": [
+    "ancestries/elf.md",
+    "ancestries/dwarf.md",
+    "ancestries/human.md",
     "classes/ranger.md",
     "classes/oracle.md",
     "classes/monk.md",
@@ -157,8 +160,6 @@
     "classes/druid.md",
     "classes/champion.md",
     "classes/arcanist.md",
-    "ancestries/index.md",
-    "ancestries/human.md",
-    "ancestries/elf.md"
+    "ancestries/index.md"
   ]
 }
