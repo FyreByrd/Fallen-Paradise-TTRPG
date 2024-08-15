@@ -1,7 +1,7 @@
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ params }) => {
-	const post = await import(`./${params.class}.md`);
+	const post = await import(`/src/markdown/classes/${params.class}.md`);
 	const { title, date } = post.metadata;
 	const content = post.default;
 
