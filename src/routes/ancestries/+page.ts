@@ -1,7 +1,7 @@
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ params }) => {
-	const allPostFiles = import.meta.glob(`/static/markdown/*/*.md`);
+	const allPostFiles = import.meta.glob(`./*.md`);
 	const iterablePostFiles = Object.entries(allPostFiles);
 
 	const allPosts = await Promise.all(
@@ -17,9 +17,9 @@ export const load: PageLoad = async ({ params }) => {
 	);
 
     const filteredPosts = allPosts.filter(post => {
-        return post.path.split("/")[1] === params.group && post.path.split("/")[2] !== "index"});
+        return post.path.split("/")[2] !== "index"});
 
-    const post = await import(/* @vite-ignore */`/static/markdown/${params.group}/index.md`);
+    const post = await import(/* @vite-ignore */`./index.md`);
     const { title, date } = post.metadata;
     const content = post.default;
 

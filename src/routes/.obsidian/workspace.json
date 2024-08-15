@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "c8388948028c94a6",
+        "id": "760223d5a6da1c1a",
         "type": "tabs",
         "children": [
           {
-            "id": "18ef801050223bfc",
+            "id": "9f5e28608e1c82b3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ancestries/dwarf.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ancestries/dwarf.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ancestries/dwarf.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "ancestries/dwarf.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,11 +138,8 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "18ef801050223bfc",
+  "active": "9f5e28608e1c82b3",
   "lastOpenFiles": [
-    "ancestries/elf.md",
-    "ancestries/dwarf.md",
-    "ancestries/human.md",
     "classes/ranger.md",
     "classes/oracle.md",
     "classes/monk.md",
@@ -160,6 +149,13 @@
     "classes/druid.md",
     "classes/champion.md",
     "classes/arcanist.md",
+    "ancestries/human.md",
+    "ancestries/elf.md",
+    "ancestries/dwarf.md",
+    "about/+page.md",
+    "classes/+page.ts",
+    "classes/+page.svelte",
+    "ancestries/+page.ts",
     "ancestries/index.md"
   ]
 }
