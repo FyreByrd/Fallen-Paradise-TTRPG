@@ -9,6 +9,9 @@
                     <a href="/classes">Classes</a>
                 </li>
                 <li>
+                    <a href="/ancestries">Ancestries</a>
+                </li>
+                <li>
                     <a href="/about">About</a>
                 </li>
             </ul>
