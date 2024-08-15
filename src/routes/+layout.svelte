@@ -6,7 +6,7 @@
 
 <Header />
 
-<main>
+<main class="prose p-5 dark:prose-invert">
     <slot />
 </main>
 
