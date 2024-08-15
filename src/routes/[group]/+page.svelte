@@ -8,12 +8,12 @@
     <svelte:component this={data.content} />
 </article>
 
-{#each data.members as m}
-    <div class="card bg-base-100 w-96 shadow-xl">
-        <div class="card-body">
-        <a href="{m.path}">
-            <h2 class="card-title">{m.meta.title}</h2>
-        </a>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    {#each data.members as m}
+        <div class="bg-base-100 shadow-xl p-10">
+            <a href="{m.path}">
+                <h2>{m.meta.title}</h2>
+            </a>
         </div>
-    </div>
-{/each}
+    {/each}
+</div>

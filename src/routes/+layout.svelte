@@ -6,8 +6,14 @@
 
 <Header />
 
-<main class="prose p-5 dark:prose-invert">
+<main class="prose p-5 dark:prose-invert w-full m-auto max-w-none">
     <slot />
 </main>
 
 <Footer />
+
+<style>
+    main {
+        min-height: 80vh;
+    }
+</style>
