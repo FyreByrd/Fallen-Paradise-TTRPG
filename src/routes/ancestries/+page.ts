@@ -7,11 +7,11 @@ export const load: PageLoad = async ({ params }) => {
 	const allPosts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
 			const { metadata } = await resolver();
-			const postPath = path.slice(13, -3);
+			const postPath = path.slice(1, -3);
 
 			return {
 				meta: metadata,
-				path: postPath
+				path: "/ancestries"+postPath
 			};
 		})
 	);

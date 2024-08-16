@@ -7,17 +7,21 @@ export const load: PageLoad = async ({ params }) => {
 	const allPosts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
 			const { metadata } = await resolver();
-			const postPath = path.slice(13, -3);
+			const postPath = path.slice(1, -3);
+
+			console.log(postPath);
 
 			return {
 				meta: metadata,
-				path: postPath
+				path: "/classes"+postPath
 			};
 		})
 	);
 
     const filteredPosts = allPosts.filter(post => {
         return post.path.split("/")[2] !== "index"});
+
+	console.log(filteredPosts);
 
     const post = await import(/* @vite-ignore */`./index.md`);
     const { title, date } = post.metadata;
