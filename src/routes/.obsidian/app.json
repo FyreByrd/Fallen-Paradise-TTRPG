@@ -1,1 +1,7 @@
-{}
+{
+  "userIgnoreFilters": [
+    "[other]/",
+    "ancestries/[ancestry]/",
+    "classes/[class]/"
+  ]
+}
