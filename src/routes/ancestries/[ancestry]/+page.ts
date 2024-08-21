@@ -1,13 +1,6 @@
 import type { PageLoad } from './$types';
+import { postData } from '$lib/posts';
 
 export const load: PageLoad = async ({ params }) => {
-    const post = await import(`../${params.ancestry}.md`);
-    const { title, date } = post.metadata;
-    const content = post.default;
-
-	return {
-        content,
-		title,
-		date
-    };
+    return postData(await import(`../${params.ancestry}.md`));
 }
