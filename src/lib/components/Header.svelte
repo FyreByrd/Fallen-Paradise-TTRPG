@@ -114,7 +114,7 @@
                         {#if opt.children}
                         <details name="menu">
                             <summary>{opt.title}</summary>
-                            <ul class="bg-base-200 rounded-t-none p-2">
+                            <ul class="bg-base-200 rounded-t-none p-2 min-w-40">
                                 {#each opt.children as child}
                                 <li>
                                     <a href={opt.root + child.route}>{child.title}</a>
