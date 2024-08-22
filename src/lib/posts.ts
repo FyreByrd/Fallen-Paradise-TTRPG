@@ -1,11 +1,12 @@
 export function postData(post: any) {
-    const { title, date } = post.metadata;
+    const { title, created, modified } = post.metadata;
     const content = post.default;
 
 	return {
         content,
 		title,
-		date
+		created,
+		modified
     };
 }
 

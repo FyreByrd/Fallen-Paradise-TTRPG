@@ -1,9 +1,6 @@
 <script>
+    import Post from '$lib/components/Post.svelte';
     export let data;
 </script>
 
-<article>
-    <h1>{data.title}</h1>
-    <p>Last Updated: {data.date}</p>
-    <svelte:component this={data.content} />
-</article>
+<Post {data} />
