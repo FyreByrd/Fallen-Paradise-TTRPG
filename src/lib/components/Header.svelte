@@ -7,6 +7,55 @@
                 .getElementsByTagName("details")
             ).forEach((d: HTMLDetailsElement) => d.open = false);
     })
+
+    const routes = [
+        {
+            title: "Rules",
+            root: "/rules",
+            children: [
+                {
+                    title: "Overview",
+                    route: "/index"
+                },
+                {
+                    title: "Character Stats",
+                    route: "/stats"
+                }
+            ]
+        },
+        {
+            title: "Character Creation",
+            root: "",
+            children: [
+                {
+                    title: "Ancestries",
+                    route: "/ancestries"
+                },
+                {
+                    title: "Classes",
+                    route: "/classes"
+                }
+            ]
+        },
+        {
+            title: "Setting",
+            root: "/setting",
+            children: [
+                {
+                    title: "Overview",
+                    route: "/index"
+                },
+                {
+                    title: "The Elements",
+                    route: "/elements"
+                }
+            ]
+        },
+        {
+            title: "About",
+            route: "/about"
+        }
+    ];
 </script>
 
 <header>
@@ -32,42 +81,24 @@
                     tabindex="0"
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
                 >
+                    {#each routes as opt}
                     <li>
+                        {#if opt.children}
                         <details name="menu">
-                            <summary>Rules</summary>
+                            <summary>{opt.title}</summary>
                             <ul class="p-2">
+                                {#each opt.children as child}
                                 <li>
-                                    <a href="/rules/stats">Character Stats</a>
+                                    <a href={opt.root + child.route}>{child.title}</a>
                                 </li>
+                                {/each}
                             </ul>
                         </details>
+                        {:else}
+                        <a href={opt.route}>{opt.title}</a>
+                        {/if}
                     </li>
-                    <li>
-                        <details name="menu">
-                            <summary>Character Creation</summary>
-                            <ul class="p-2">
-                                <li>
-                                    <a href="/classes">Classes</a>
-                                </li>
-                                <li>
-                                    <a href="/ancestries">Ancestries</a>
-                                </li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li>
-                        <details name="menu">
-                            <summary>Setting</summary>
-                            <ul class="p-2">
-                                <li>
-                                    <a href="/setting/elements">The Elements</a>
-                                </li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li>
-                        <a href="/about">About</a>
-                    </li>
+                    {/each}
                 </ul>
             </div>
             <a href="/">Fallen Paradise TTRPG</a>
@@ -78,42 +109,24 @@
             </div>
             <div class="flex-none" id="menus">
                 <ul class="menu menu-horizontal px-1">
+                    {#each routes as opt}
                     <li>
+                        {#if opt.children}
                         <details name="menu">
-                            <summary>Rules</summary>
+                            <summary>{opt.title}</summary>
                             <ul class="bg-base-200 rounded-t-none p-2">
+                                {#each opt.children as child}
                                 <li>
-                                    <a href="/rules/stats">Character Stats</a>
+                                    <a href={opt.root + child.route}>{child.title}</a>
                                 </li>
+                                {/each}
                             </ul>
                         </details>
+                        {:else}
+                        <a href={opt.route}>{opt.title}</a>
+                        {/if}
                     </li>
-                    <li>
-                        <details name="menu">
-                            <summary>Character Creation</summary>
-                            <ul class="bg-base-200 rounded-t-none p-2">
-                                <li>
-                                    <a href="/classes">Classes</a>
-                                </li>
-                                <li>
-                                    <a href="/ancestries">Ancestries</a>
-                                </li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li>
-                        <details name="menu">
-                            <summary>Setting</summary>
-                            <ul class="bg-base-200 rounded-t-none p-2">
-                                <li>
-                                    <a href="/setting/elements">The Elements</a>
-                                </li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li>
-                        <a href="/about">About</a>
-                    </li>
+                    {/each}
                 </ul>
             </div>
         </div>
