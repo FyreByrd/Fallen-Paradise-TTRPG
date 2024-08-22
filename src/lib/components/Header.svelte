@@ -1,9 +1,11 @@
 <script lang="ts">
     import { beforeNavigate } from "$app/navigation";
-    let ccDrop: HTMLDetailsElement;
 
     beforeNavigate(() => {
-        ccDrop.open = false;
+        Array.from(
+            document.getElementById("menus")!
+                .getElementsByTagName("details")
+            ).forEach((d: HTMLDetailsElement) => d.open = false);
     })
 </script>
 
@@ -12,10 +14,20 @@
         <div class="flex-1">
             <a href="/">Fallen Paradise TTRPG</a>
         </div>
-        <div class="flex-none">
+        <div class="flex-none" id="menus">
             <ul class="menu menu-horizontal px-1">
                 <li>
-                    <details bind:this={ccDrop}>
+                    <details name="menu">
+                        <summary>Rules</summary>
+                        <ul class="bg-base-200 rounded-t-none p-2">
+                            <li>
+                                <a href="/rules/stats">Character Stats</a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details name="menu">
                         <summary>Character Creation</summary>
                         <ul class="bg-base-200 rounded-t-none p-2">
                             <li>
@@ -23,6 +35,16 @@
                             </li>
                             <li>
                                 <a href="/ancestries">Ancestries</a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details name="menu">
+                        <summary>Setting</summary>
+                        <ul class="bg-base-200 rounded-t-none p-2">
+                            <li>
+                                <a href="/setting/elements">The Elements</a>
                             </li>
                         </ul>
                     </details>
