@@ -1,3 +1,12 @@
+<script lang="ts">
+    import { beforeNavigate } from "$app/navigation";
+    let ccDrop: HTMLDetailsElement;
+
+    beforeNavigate(() => {
+        ccDrop.open = false;
+    })
+</script>
+
 <header>
 	<nav class="navbar bg-base-300">
         <div class="flex-1">
@@ -6,7 +15,7 @@
         <div class="flex-none">
             <ul class="menu menu-horizontal px-1">
                 <li>
-                    <details>
+                    <details bind:this={ccDrop}>
                         <summary>Character Creation</summary>
                         <ul class="bg-base-200 rounded-t-none p-2">
                             <li>
