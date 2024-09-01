@@ -1,7 +1,7 @@
 ---
 title: Character Stats
 created: 2024-08-21T20:34:49-04:00
-modified: 2024-09-01T18:59:03-04:00
+modified: 2024-09-01T19:16:21-04:00
 ---
 All characters have six stats:
 - **S**trength: A character's ability to deal physical damage and perform other feats of atheleticism.
@@ -34,14 +34,14 @@ In some circumstances an ability or check may not use a roll but may instead ref
 
 In some circumstances an ability or check may not use a roll but may instead refer to the *modifier* (abbreviated as *mod*) of a stat. The *modifier* is calculated as the `&LeftCeiling;passive / 2&RightCeiling; - 2`. A table is provided below for convenience.
 
-| *Size* | *Passive* | *Size*      | *Passive* |
-| ------ | --------- | ----------- | --------- |
-| `1d4`  | -1        | `1d4 + 1d6` | +1        |
-| `1d6`  | 0         | `2d6`       | +2        |
-| `1d8`  | 0         | `2d8`       | +3        |
-| `1d10` | +1        | `2d10`      | +4        |
-| `1d12` | +1        | `2d12`      | +5        |
-| `2d4`  | +1        | `2d20`      | +9        |
+| *Size* | *Modifier* | *Size*      | *Modifier* |
+| ------ | ---------- | ----------- | ---------- |
+| `1d4`  | -1         | `1d4 + 1d6` | +1         |
+| `1d6`  | 0          | `2d6`       | +2         |
+| `1d8`  | 0          | `2d8`       | +3         |
+| `1d10` | +1         | `2d10`      | +4         |
+| `1d12` | +1         | `2d12`      | +5         |
+| `2d4`  | +1         | `2d20`      | +9         |
 
 ## Character Creation and Leveling
 
