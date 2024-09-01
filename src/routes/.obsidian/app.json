@@ -3,5 +3,6 @@
     "[other]/",
     "ancestries/[ancestry]/",
     "classes/[class]/"
-  ]
+  ],
+  "useMarkdownLinks": true
 }
