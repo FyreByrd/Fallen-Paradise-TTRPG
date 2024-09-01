@@ -12,8 +12,17 @@
 
 <Footer />
 
-<style>
+<style lang=postcss>
     main {
         min-height: 80vh;
+    }
+    main :global(table) {
+        margin: auto;
+        @apply w-full;
+    }
+    @media screen(md) {
+        main :global(table) {
+            @apply max-w-fit;
+        }
     }
 </style>
