@@ -1,7 +1,7 @@
 ---
 title: Character Stats
 created: 2024-08-21T20:34:49-04:00
-modified: 2024-09-01T19:16:21-04:00
+modified: 2024-09-03T20:14:28-04:00
 ---
 All characters have six stats:
 - **S**trength: A character's ability to deal physical damage and perform other feats of atheleticism.
@@ -46,6 +46,24 @@ In some circumstances an ability or check may not use a roll but may instead ref
 ## Character Creation and Leveling
 
 By default, a level 1 character will have **1d8** in each stat and can choose to *decrease* the size of up to two stats to *increase* the size of up to two stats.
+
+```mermaid
+flowchart LR
+plus10>1d4 + 1d6]
+plus12[1d4 + 1d8]
+plus14[1d6 + 1d8]
+1d4[/1d4/] <--> 1d6
+subgraph "Character Creation"
+	direction LR
+	1d6 <==> 1d8{1d8} <==> 1d10{{1d10}} 
+end
+1d10 <==> 1d12{{1d12}} <==> 2d6 <==> 2d8{2d8} <==> 2d10{{2d10}} <==> 2d12 <-.-> 2d20{{2d20}} --x 2d100([2d100])
+plus10 ==> 2d6 ==> plus14 ==> 2d10
+1d12{{1d12}} ==> plus12 ==> 2d8{2d8} ==> 1d20{{1d20}} --x 1d100([1d100])
+1d10 ==> plus10
+1d8 <==> 2d4[/2d4/] <==> plus10 <==> plus12 <==> plus14 ==> 1d20 ==> 2d12{{2d12}}
+```
+
 ### Decreasing a Stat
 
 `coming soon`
