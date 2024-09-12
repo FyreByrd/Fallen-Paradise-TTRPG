@@ -2,7 +2,7 @@
     import "tailwindcss/tailwind.css";
     import Header from '$lib/components/Header.svelte';
     import Footer from "$lib/components/Footer.svelte";
-    import { onMount } from "svelte";
+    import { afterUpdate } from "svelte";
     import mermaid from "mermaid";
 
     mermaid.initialize({ 
@@ -10,8 +10,9 @@
         startOnLoad: false 
     });
 
-    onMount(() => {
-        document.querySelectorAll("pre.language-mermaid").forEach((pre) => {
+    afterUpdate(async () => {
+        const nodes = document.querySelectorAll("pre.language-mermaid");
+        nodes.forEach((pre) => {
             pre.classList.replace("language-mermaid", "mermaid");
             pre.querySelectorAll("code.language-mermaid").forEach((code) => {
                 code.querySelectorAll("span.token").forEach((s) => {
@@ -23,11 +24,18 @@
                 pre.innerHTML = code.innerHTML;
             })
         });
-        try {
-            mermaid.run();
-        }
-        catch (e) {
-            console.log(e);
+        if (nodes.length) {
+            try {
+                await mermaid.run();
+                nodes.forEach((n) => {
+                    Array.from(n.getElementsByTagName("svg")).forEach((svg) => {
+                        svg.removeAttribute("width");
+                    });
+                })
+            }
+            catch (e) {
+                console.log(e);
+            }
         }
     });
 </script>
