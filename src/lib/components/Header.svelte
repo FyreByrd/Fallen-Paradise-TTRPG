@@ -20,6 +20,10 @@
                 {
                     title: "Character Stats",
                     route: "/stats"
+                },
+                {
+                    title: "Levels",
+                    route: "/levels"
                 }
             ]
         },
