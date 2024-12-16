@@ -1,7 +1,7 @@
 ---
 title: Character Stats
 created: 2024-08-21T20:34:49-04:00
-modified: 2024-12-15T14:35:08-05:00
+modified: 2024-12-15T22:28:59-05:00
 ---
 All characters have six stats:
 - **S**trength: A character's ability to deal physical damage and perform other feats of atheleticism.
@@ -52,7 +52,8 @@ subgraph "Character Creation"
 	1d6 <==> 1d8{1d8} <==> 1d10{{1d10}} 
 end
 1d10 <==> 1d12{{1d12}} <==> 2d6 <==> 2d8{2d8} <==> 2d10{{2d10}} <==> 2d12 <-.-> 2d20{{2d20}} --x 2d100([2d100])
-plus10 ==> 2d6 <==> 1d20 ==> 2d12{{2d12}}
+plus10 ==> 2d6
+1d20 ==> 2d12{{2d12}}
 1d12{{1d12}} ==> plus12 ==> 2d8{2d8} <==> 1d20{{1d20}} --x 1d100([1d100])
 1d10 ==> plus10
 1d8 <==> 2d4[/2d4/] <==> plus10 <==> plus12
