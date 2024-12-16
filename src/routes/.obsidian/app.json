@@ -1,4 +1,6 @@
 {
-  "userIgnoreFilters": null,
+  "userIgnoreFilters": [
+    "/(^[)|(/[)/"
+  ],
   "useMarkdownLinks": false
 }

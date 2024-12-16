@@ -56,6 +56,28 @@
             ]
         },
         {
+            title: "Spells",
+            root: "/spells",
+            children: [
+                {
+                    title: "Overview",
+                    route: "/index"
+                },
+                {
+                    title: "Schools",
+                    route: "/schools"
+                },
+                {
+                    title: "Songs",
+                    route: "/songs"
+                },
+                {
+                    title: "Meta-Magic",
+                    route: "/meta-magic"
+                }
+            ]
+        },
+        {
             title: "About",
             route: "/about"
         }
