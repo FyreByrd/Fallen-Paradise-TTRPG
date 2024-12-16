@@ -24,6 +24,10 @@
                 {
                     title: "Levels",
                     route: "/levels"
+                },
+                {
+                    title: "Combat",
+                    route: "/combat"
                 }
             ]
         },

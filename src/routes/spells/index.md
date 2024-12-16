@@ -1,7 +1,7 @@
 ---
 title: Overview of the Magic System
 created: 2024-12-15T17:41:35-05:00
-modified: 2024-12-15T22:00:03-05:00
+modified: 2024-12-15T22:05:41-05:00
 ---
 ## The Elements
 
@@ -24,6 +24,8 @@ Spells officially range from level 1 to level 9, although higher levels can be r
 2. Focus: Have a lingering effect with an associated ongoing cost.
 	- Just because a spell could cause an ongoing effect does not mean it would fall under this category. If, for example, an immediate spell were to ignite an object, that object would stay on fire without any extra cost, as that is the natural behavior of fire. A fire spell of the focus type would involve a continual blast of flame or lighting something on fire and keeping it at a consistent strength (i.e. higher than would be normal for an ordinary fire of the same size).
 3. Charge: The effect of this spell can be increased over the course of several rounds while the spell is held to charge without upcasting the spell before releasing the devastating effect. (Yes, you *could* charge a fireball for a whole minute, you just might be charged with war crimes later if you (or any witnesses for that matter) survive).
+
+Spells of level 6 or higher take at least a full turn to cast, regardless of how many actions a player may have that turn.
 
 The costs for the different types of spells can be calculated through simple formulae; however, for convenience, the costs are summarized in the below table.
 
