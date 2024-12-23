@@ -1,7 +1,7 @@
 ---
 title: Overview of the Magic System
 created: 2024-12-15T17:41:35-05:00
-modified: 2024-12-15T22:05:41-05:00
+modified: 2024-12-22T20:14:40-06:00
 ---
 ## The Elements
 
@@ -50,4 +50,4 @@ If a caster casts a spell above their safe limit, they will take `d20 * the leve
 
 ## Mana Storage
 
-Any caster can store mana on themselves, subject to class-specific limits. Most casters can only store one type of mana on themselves. Mana can also be stored in receptacles. The amount of mana that can be stored in a receptacle is equal to `(Passive Casting State + CB) * number of materials in the receptacle matching the mana type`.
+Any caster can store mana on themselves, subject to class-specific limits. Most casters can only store one type of mana on themselves. Mana can also be stored in receptacles. The amount of mana that can be stored in a receptacle is equal to `(Passive Casting State + CB) * number of materials in the receptacle matching the mana type` (Note: this does mean that a receptacle *can* hold more than one type of mana).
