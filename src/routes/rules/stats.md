@@ -1,10 +1,10 @@
 ---
 title: Character Stats
 created: 2024-08-21T20:34:49-04:00
-modified: 2024-12-15T22:28:59-05:00
+modified: 2025-01-19T14:37:43-05:00
 ---
 All characters have six stats:
-- **S**trength: A character's ability to deal physical damage and perform other feats of atheleticism.
+- **S**trength: A character's ability to deal physical damage and perform other feats of athleticism.
 - **F**ortitude: A character's ability to take damage and recover from physical effects.
 - **D**exterity: A character's ability to dodge and perform other acts requiring finer motor skills.
 - **A**cuity: A character's capacity to observe their surroundings and utilize experience.
