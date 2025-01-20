@@ -1,11 +1,11 @@
 ---
 title: Levels and Multiclassing
 created: 2024-12-15T15:05:54-05:00
-modified: 2025-01-19T20:12:50-05:00
+modified: 2025-01-19T20:50:43-05:00
 ---
 A player character starts at level 1 and can level up all the way to level 20 (for now).
 A player character must have at least 1 class, and can have as many classes as they feel capable of keeping track of, provided other class-specific restrictions are met.
-For each class a character has, the character has a different level in each class, the sum of which is equal to their character level. A character can only level up one of their classes at a time when leveling up their character. Additionally, every fourth level (i.e. 4, 8, 12, 16, and 20) a character may increase the size of up to two of their stats by 1.
+For each class a character has, the character has a different level in each class, the sum of which is equal to their character level. A character can only level up one of their classes at a time when leveling up their character. Additionally, every 3rd level, starting at level 4 (i.e. 4, 7, 10, 13, 16, and 19) a character may increase the size of up to two of their stats by 1.
 
 ## Proficiency Bonuses
 

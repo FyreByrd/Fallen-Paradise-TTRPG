@@ -1,7 +1,7 @@
 ---
 title: Character Stats
 created: 2024-08-21T20:34:49-04:00
-modified: 2025-01-19T14:37:43-05:00
+modified: 2025-01-19T22:22:47-05:00
 ---
 All characters have six stats:
 - **S**trength: A character's ability to deal physical damage and perform other feats of athleticism.
@@ -21,44 +21,43 @@ Most checks involving character stats will usually use the results of rolling tw
 
 In some circumstances an ability or check may not use a roll but may instead refer to the **passive** value of a stat. The **passive** value of a stat is calculated as the statistical expected value (`&LeftFloor;(min value + max value) / 2&RightFloor;`) of a single roll in the stat. Any applicable bonuses or penalties will increase or decrease the **passive** value accordingly. A table is provided below for convenience.
 
-| *Size* | *Passive* | *Size*      | *Passive* | *Size* | *Passive* |
-| ------ | --------- | ----------- | --------- | ------ | --------- |
-| `1d4`  | 2         | `1d20`      | 10        | `2d8`  | 9         |
-| `1d6`  | 3         | `1d4 + 1d6` | 6         | `2d10` | 11        |
-| `1d8`  | 4         | `1d4 + 1d8` | 7         | `2d12` | 13        |
-| `1d10` | 5         | `2d4`       | 5         | `2d20` | 21        |
-| `1d12` | 6         | `2d6`       | 7         |        |           |
+| *Size*       | *Passive* | *Size* | *Passive* | *Size*       | *Passive* |
+| ------------ | --------- | ------ | --------- | ------------ | --------- |
+|              |           | `1d4`  | 2         |              |           |
+|              |           | `1d6`  | 3         |              |           |
+|              |           | `1d8`  | 4         |              |           |
+| `2d4`        | 5         | `1d10` | 5         |              |           |
+| `1d4 + 1d6`  | 6         | `1d12` | 6         |              |           |
+| `1d4 + 1d8`  | 7         | `2d6`  | 7         |              |           |
+| `1d4 + 1d10` | 8         |        |           | `1d6 + 1d8`  | 8         |
+| `1d4 + 1d12` | 9         | `2d8`  | 9         | `1d6 + 1d10` | 9         |
+| `1d4+2d8`    | 11        | `2d10` | 11        | `1d8 + 1d12` | 11        |
+| `1d4 + 1d20` | 13        | `2d12` | 13        | `3d8`        | 13        |
+| `1d20`       | 10        | `2d20` | 21        | `3d12`       | 19        |
+
 ### Calculating Modifiers
 
 In some circumstances an ability or check may not use a roll but may instead refer to the **modifier** (abbreviated as **mod**) of a stat. The **modifier** is calculated as the `&LeftCeiling;passive / 2&RightCeiling; - 2`. A table is provided below for convenience.
 
-| *Size* | *Mod* | *Size*      | *Mod* | *Size* | *Mod* |
-| ------ | ----- | ----------- | ----- | ------ | ----- |
-| `1d4`  | -1    | `1d20`      | +3    | `2d8`  | +3    |
-| `1d6`  | +0    | `1d4 + 1d6` | +1    | `2d10` | +4    |
-| `1d8`  | +0    | `1d4 + 1d8` | +2    | `2d12` | +5    |
-| `1d10` | +1    | `2d4`       | +1    | `2d20` | +8    |
-| `1d12` | +1    | `2d6`       | +2    |        |       |
+| *Size*       | *Mod* | *Size* | *Mod* | *Size*       | *Mod* |
+| ------------ | ----- | ------ | ----- | ------------ | ----- |
+|              |       | `1d4`  | -1    |              |       |
+|              |       | `1d6`  | +0    |              |       |
+|              |       | `1d8`  | +0    |              |       |
+| `2d4`        | +1    | `1d10` | +1    |              |       |
+| `1d4 + 1d6`  | +1    | `1d12` | +1    |              |       |
+| `1d4 + 1d8`  | +2    | `2d6`  | +2    |              |       |
+| `1d4 + 1d10` | +2    |        |       | `1d6 + 1d8`  | +2    |
+| `1d4 + 1d12` | +3    | `2d8`  | +3    | `1d6 + 1d10` | +3    |
+| `1d4+2d8`    | +4    | `2d10` | +4    | `1d8 + 1d12` | +4    |
+| `1d4 + 1d20` | +5    | `2d12` | +5    | `3d8`        | +5    |
+| `1d20`       | +3    | `2d20` | +8    | `3d12`       | +7    |
+
 ## Character Creation and Leveling
 
 By default, a level 1 character will have `1d8` in each stat and can choose to **decrease** the size of up to two stats to **increase** the size of up to two stats.
 
-```mermaid
-flowchart LR
-plus10>1d4 + 1d6]
-plus12[1d4 + 1d8]
-1d4[/1d4/] <-.-> 1d6
-subgraph "Character Creation"
-	1d6 <==> 1d8{1d8} <==> 1d10{{1d10}} 
-end
-1d10 <==> 1d12{{1d12}} <==> 2d6 <==> 2d8{2d8} <==> 2d10{{2d10}} <==> 2d12 <-.-> 2d20{{2d20}} --x 2d100([2d100])
-plus10 ==> 2d6
-1d20 ==> 2d12{{2d12}}
-1d12{{1d12}} ==> plus12 ==> 2d8{2d8} <==> 1d20{{1d20}} --x 1d100([1d100])
-1d10 ==> plus10
-1d8 <==> 2d4[/2d4/] <==> plus10 <==> plus12
-```
-
+![A flowchart showing the relations between the different sized dice](/dice-chart.svg)
 ### Decreasing a Stat
 
 The size of a die is decreased in accordance with the above graph from right to left. A die cannot be downgraded below `1d6`; however, a `1d4` is reachable while under some effects, such as rage.
