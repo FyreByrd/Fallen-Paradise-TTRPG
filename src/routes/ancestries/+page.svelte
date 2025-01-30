@@ -1,7 +1,8 @@
 <script>
     import Card from '$lib/components/Card.svelte';
     import Post from '$lib/components/Post.svelte';
-    export let data;
+    /** @type {{data: any}} */
+    let { data } = $props();
 </script>
 
 <Post {data}>

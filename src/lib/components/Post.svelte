@@ -1,5 +1,6 @@
 <script>
-    export let data;
+    /** @type {{data: any, children?: import('svelte').Snippet}} */
+    let { data, children } = $props();
 </script>
 
 <article>
@@ -12,8 +13,8 @@
     {#if data.flavor}
     <p><em>{data.flavor}</em></p>
     {/if}
-    <svelte:component this={data.content} />
-    <slot></slot>
+    <data.content />
+    {@render children?.()}
     <hr>
     <p>
         Updated: {(new Date(data.modified)).toLocaleString()}

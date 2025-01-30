@@ -106,7 +106,7 @@
                         d="M4 6h16M4 12h8m-8 6h16" />
                     </svg>
                 </div>
-                <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+                <!-- svelte-ignore a11y_no_noninteractive_tabindex -->
                 <ul
                     tabindex="0"
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"

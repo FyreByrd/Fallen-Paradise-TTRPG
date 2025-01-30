@@ -2,12 +2,14 @@
     import "tailwindcss/tailwind.css";
     import Header from '$lib/components/Header.svelte';
     import Footer from "$lib/components/Footer.svelte";
+    /** @type {{children?: import('svelte').Snippet}} */
+    let { children } = $props();
 </script>
 
 <Header />
 
 <main class="prose p-5 dark:prose-invert w-full m-auto max-w-none">
-    <slot />
+    {@render children?.()}
 </main>
 
 <Footer />
