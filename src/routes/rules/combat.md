@@ -1,7 +1,7 @@
 ---
 title: Combat Rules
 created: 2024-12-15T22:01:33-05:00
-modified: 2025-08-04T16:07:52-04:00
+modified: 2025-08-04T19:57:49-04:00
 ---
 Combat occurs in rounds of 6 second increments in game. During a players turn, they may take a number of actions equal to `&LeftCeiling;PB / 2&RightCeiling;`. It is worth noting that some spells or other actions may take more than one action to do (and thus cannot be done until higher levels). There is no distinction between a roll to hit and a roll for damage. Just roll for damage and the target will take a defensive reaction in response.
 
@@ -44,3 +44,8 @@ If a creature is resistant to a specific damage type, damage of that type is hal
 ### Vulnerability
 
 If a creature is vulnerable to a damage type, damage of that type is doubled against that creature for each level of vulnerability.
+
+#### Special Notes on Heat and Cold
+
+Vulnerability to Heat or Cold multiplies Fire or Frost damage by 1.5.
+Resistance to Heat or Cold multiplies Fire or Frost damage by 2/3.
