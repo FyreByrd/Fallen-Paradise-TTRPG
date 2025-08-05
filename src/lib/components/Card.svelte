@@ -1,6 +1,5 @@
 <script>
-    /** @type {{item: any}} */
-    let { item } = $props();
+    let { item, extra = undefined } = $props();
 </script>
 
 
@@ -8,6 +7,7 @@
     <a href="{item.path}">
         <h2>{item.meta.title}</h2>
     </a>
+    {@render extra?.(item)}
     {#if item.meta.flavor}
     <p>
         <em class="excerpt">{item.meta.flavor.slice(0, 100)}</em>

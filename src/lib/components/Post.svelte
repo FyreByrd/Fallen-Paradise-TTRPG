@@ -1,6 +1,6 @@
 <script>
-    /** @type {{data: any, children?: import('svelte').Snippet}} */
-    let { data, children } = $props();
+    /** @type {{data: any, children?: import('svelte').Snippet, prefix?: import('svelte').Snippet}} */
+    let { data, children, prefix } = $props();
 </script>
 
 <article>
@@ -13,6 +13,7 @@
     {#if data.flavor}
     <p><em>{data.flavor}</em></p>
     {/if}
+    {@render prefix?.()}
     <data.content />
     {@render children?.()}
     <hr>

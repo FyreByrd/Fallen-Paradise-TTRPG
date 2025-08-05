@@ -1,5 +1,5 @@
 export function postData(post: any) {
-    const { title, created, modified, flavor } = post.metadata;
+    const { title, created, modified, flavor, ...rest } = post.metadata;
     const content = post.default;
 
 	return {
@@ -7,7 +7,8 @@ export function postData(post: any) {
 		title,
 		created,
 		modified,
-		flavor
+		flavor,
+		rest
     };
 }
 
@@ -22,5 +23,5 @@ export async function filterPosts(all: Record<string, () => Promise<unknown>>, p
 				path: "/"+parent+postPath
 			};
 		})
-	)).filter(post => { return post.path.split("/")[2] !== "index"});
+	)).filter(post => { return post.path.split("/").at(-1) !== "index"});
 }
